@@ -87,7 +87,6 @@ void printBuf(uint8_t* buffer, uint16_t len){
 PZEM017v1::PZEM017v1(uint8_t receivePin, uint8_t transmitPin, uint8_t addr)
 {
     SoftwareSerial *port = new SoftwareSerial(receivePin, transmitPin);
-    port->begin(PZEM_BAUD_RATE,SWSERIAL_8N2);
     this->_serial = port;
     this->_isSoft = true;
     init(addr);
